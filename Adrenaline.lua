@@ -1,7 +1,7 @@
   --[[
     By exclusivecm
   ]]--
-  
+local localPlayer = game.Players.LocalPlayer
 local plrgrp = game.Workspace:FindFirstChild("Players")
 if not plrgrp then return end
 
@@ -14,10 +14,10 @@ local function addHgh(character)
     local highlight = Instance.new("Highlight")
     highlight.OutlineTransparency = 1
     
-    if player.Team and player.Team.Name == "Red" then
+    if player.Team == localPlayer.Team and player.Team.Name ==  localPlayer.Team.Name then
+        highlight.FillColor = Color3.fromRGB(0, 255, 0)
+    elseif player.Team == not localPlayer.Team and player.Team.Name == not localPlayer.Team.Name then
         highlight.FillColor = Color3.fromRGB(255, 0, 0)
-    elseif player.Team and player.Team.Name == "Blue" then
-        highlight.FillColor = Color3.fromRGB(0, 0, 255)
     end
     highlight.Parent = character
 end
