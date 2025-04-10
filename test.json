@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Hypercam",
+        "onClick": "print('Hypercam')"
+    },
+    {
+        "name": "Universal",
+        "onClick": "print('Universal')"
+    },
+    {
+        "name": "test1000",
+        "onClick": "print('test1000')"
+    }
+]
