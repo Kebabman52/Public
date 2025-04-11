@@ -2777,7 +2777,7 @@ function Library:SetWatermark(Text)
     Library.WatermarkText.Text = Text;
 end;
 
-function Library:Notify(Text, Time, CustomColor)
+function Library:Notify(Text, Time, CustomColor, CustomFont)
     local XSize, YSize = Library:GetTextBounds(Text, Library.Font, 14)
     YSize = YSize + 7
 
@@ -2835,6 +2835,7 @@ function Library:Notify(Text, Time, CustomColor)
         Position = UDim2.new(0, 4, 0, 0),
         Size = UDim2.new(1, -4, 1, 0),
         Text = Text,
+        Font = CustomFont or Library.Font,
         TextXAlignment = Enum.TextXAlignment.Left,
         TextSize = 14,
         ZIndex = 103,
