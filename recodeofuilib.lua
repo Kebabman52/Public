@@ -2837,7 +2837,6 @@ function Library:Notify(Text, Time, CustomColor)
         Text = Text,
         TextXAlignment = Enum.TextXAlignment.Left,
         TextSize = 14,
-        TextColor3 = CustomColor or Library.FontColor,
         ZIndex = 103,
         Parent = InnerFrame,
     })
@@ -2866,7 +2865,6 @@ function Library:Notify(Text, Time, CustomColor)
         NotifyOuter:Destroy()
     end)
 end
-
 
 function Library:CreateWindow(...)
     local Arguments = { ... }
